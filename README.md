@@ -42,9 +42,9 @@ docker-compose up -d
 ```
 
 ### Services
-- **Backend**: http://104.173.199.40:8000
-- **Frontend**: http://104.173.199.40:3000
-- **API Docs**: http://104.173.199.40:8000/docs
+- **Backend**: http://104.173.199.40:55223
+- **Frontend**: http://104.173.199.40:55224
+- **API Docs**: http://104.173.199.40:55223/docs
 
 ## API Endpoints
 

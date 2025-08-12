@@ -6,7 +6,7 @@ services:
       context: ./backend
       dockerfile: Dockerfile
     ports:
-      - "8000:8000"
+      - "55223:8000"
     environment:
       - PYTHONUNBUFFERED=1
     restart: unless-stopped
@@ -22,9 +22,9 @@ services:
       context: ./frontend
       dockerfile: Dockerfile
       args:
-        - VITE_API_URL=http://104.173.199.40:8000/api/v1
+        - VITE_API_URL=http://104.173.199.40:55223/api/v1
     ports:
-      - "3000:3000"
+      - "55224:3000"
     depends_on:
       backend:
         condition: service_healthy
