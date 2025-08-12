@@ -3,7 +3,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from .routers import rivers
+from .routers import rivers, lakes
 
 app = FastAPI(
     title="Utah River Lake Data API",
@@ -19,7 +19,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(rivers.router, prefix="/api/v1", tags=["rivers"])
+app.include_router(rivers.router, prefix="/api/v1/rivers", tags=["rivers"])
+app.include_router(lakes.router, prefix="/api/v1/lakes", tags=["lakes"])
 
 
 @app.get("/")
