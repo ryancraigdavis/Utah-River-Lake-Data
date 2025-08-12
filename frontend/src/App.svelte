@@ -1,13 +1,15 @@
 <script>
   import RiverData from './lib/RiverData.svelte'
   import LakeData from './lib/LakeData.svelte'
+  import { API_BASE } from './lib/config.js'
   import { onMount } from 'svelte'
   
   let apiStatus = 'checking...'
   
   onMount(async () => {
     try {
-      const response = await fetch('http://localhost:8000/health')
+      const healthUrl = API_BASE.replace('/api/v1', '/health')
+      const response = await fetch(healthUrl)
       const data = await response.json()
       apiStatus = data.status === 'healthy' ? 'connected' : 'error'
     } catch (error) {

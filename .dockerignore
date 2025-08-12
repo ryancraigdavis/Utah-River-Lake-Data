@@ -1,0 +1,40 @@
+# Git
+.git
+.gitignore
+
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Dependencies
+node_modules
+.venv
+venv
+
+# Build outputs
+dist
+build
+.hatch_build
+
+# IDE
+.vscode
+.idea
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs
+
+# Environment
+.env*
+
+# Cache
+.uv_cache
+__pycache__
+*.pyc
+.coverage
+.pytest_cache

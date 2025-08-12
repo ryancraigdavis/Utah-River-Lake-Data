@@ -9,10 +9,12 @@ dependencies = [
     "uvicorn[standard]>=0.32.0",
     "httpx>=0.28.0",
     "pydantic>=2.10.0",
+    "gunicorn>=23.0.0",
 ]
 
 [tool.hatch.envs.default.scripts]
 dev-server = "uvicorn utah_river_lake_backend.app:app --reload --host 0.0.0.0 --port 8000"
+prod-server = "gunicorn utah_river_lake_backend.app:app -w 4 -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:8000"
 
 [build-system]
 requires = ["hatchling"]
