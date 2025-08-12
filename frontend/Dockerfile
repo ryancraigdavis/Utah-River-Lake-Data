@@ -8,8 +8,8 @@ COPY package.json ./
 # Install dependencies
 RUN npm install
 
-# Copy source code explicitly
-COPY src/ ./src/
+# Copy all source files including subdirectories
+COPY src ./src
 COPY index.html ./
 COPY vite.config.js ./
 
