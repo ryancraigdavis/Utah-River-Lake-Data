@@ -2,7 +2,7 @@
 name = "utah_river_lake_backend"
 version = "0.1.0"
 description = "Add your description here"
-readme = "README.md"
+readme = {file = "README.md", content-type = "text/markdown"}
 requires-python = ">=3.12"
 dependencies = [
     "fastapi>=0.115.0",
