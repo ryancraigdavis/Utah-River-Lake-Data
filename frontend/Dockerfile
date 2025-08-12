@@ -13,8 +13,6 @@ COPY src ./src
 COPY index.html ./
 COPY vite.config.js ./
 
-# Debug: List files to verify copy
-RUN ls -la && ls -la src/ && ls -la src/lib/
 
 # Accept build arg for API URL
 ARG VITE_API_URL
